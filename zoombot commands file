@@ -1,0 +1,37 @@
+git clone https://GitHub.com/jeremy-rutman/zoombot
+from picamera import PiCamera
+from time import sleep camera= PiCamera ()
+camera.start_preview(alpha=192)
+sleep(1)
+camera.capture("/home/pi/desktop/pic.jpg")
+camera.stop_preview()
+ do_command(command):
+    print(f'doing command {command}')
+    if command == 'REV':
+        GPIO.output(REV_PIN,GPIO.HIGH)
+        for i in range(3):
+            sleep(2)
+            GPIO.output(LIGHTS_PIN,GPIO.HIGH)
+            sleep(2)
+            GPIO.output(LIGHTS_PIN,GPIO.LOW)
+        GPIO.output(REV_PIN,GPIO.LOW)
+    if command == 'FWD':
+        GPIO.output (FWD_PIN,GPIO.HIGH)
+        print ("hi")
+        sleep(1)
+        GPIO.output (FWD_PIN,GPIO.LOW)
+    if command == 'REV':
+        GPIO.output (REV_PIN,GPIO.HIGH)
+        print ("hi")
+        sleep(1)
+        GPIO.output (REV_PIN,GPIO.LOW)
+    if command == 'RIGHT':
+        GPIO.output (RIGHT_PIN,GPIO.HIGH)
+        print ("hi")
+        sleep(1)
+        GPIO.output (RIGHT_PIN,GPIO.LOW)
+    if command == 'LEFT':
+        GPIO.output (LEFT_PIN,GPIO.HIGH)
+        print ("hi")
+        sleep(1)
+        GPIO.output (LEFT_PIN,GPIO.LOW)
